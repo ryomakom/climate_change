@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="朝日新聞デジタル企画報道部　小宮山亮磨 @ryomakom" />
+
+<meta name="date" content="2023-08-10" />
+
+<title>2023年の夏は観測史上最も暑かった</title>
+
+<script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="site_style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">2023年の夏は観測史上最も暑かった</h1>
+<h4 class="author">朝日新聞デジタル企画報道部　小宮山亮磨 <span
+class="citation">@ryomakom</span></h4>
+<h4 class="date">2023-08-10</h4>
+
+</div>
+
+
+<div id="朝日新聞最も暑かった７月記事のデータ可視化について"
+class="section level2">
+<h2>朝日新聞「最も暑かった７月」記事のデータ可視化について</h2>
+<p>朝日新聞は8月2日の朝刊1面と2面で、「最も暑かった7月　120年間分析、45年ぶり更新」「居座る猛暑」との記事を掲載した。デジタル版では同内容の記事<a
+href="https://digital.asahi.com/articles/ASR814K4PR7XULLI009.html">「7月の気温、125年で最も高く　温暖化の影響で45年ぶり記録更新」</a><a
+href="https://digital.asahi.com/articles/ASR816CTHR7YULLI004.html">「お風呂並みの海面水温、シエスタ導入提案…『地球沸騰』の現実と要因」</a>を8月1日に掲載した。</p>
+<p>分析対象としたのは、気象庁が「日本の平均気温」を算出するための基準としている<a
+href="https://www.data.jma.go.jp/cpdinfo/temp/clc_jpn.html">国内15地点</a>のほか、東京、名古屋、大阪、福岡の計19地点。分析にあたっては、気象庁の専門家から監修を得た。</p>
+<p>記事のもとになったデータと、可視化のためのコードを以下で説明する。</p>
+</div>
+<div id="まず必要なパッケージを読む" class="section level2">
+<h2>まず必要なパッケージを読む</h2>
+<p>レギュラー選手3人を呼び出します。</p>
+<pre class="r"><code>library(tidyverse)
+library(lubridate)
+library(gt)</code></pre>
+</div>
+<div id="データを読み込む" class="section level2">
+<h2>データを読み込む</h2>
+<p>気象庁のサイトからとってきたデータを読み込む。</p>
+<pre class="r"><code># 19世紀末から2022年までのデータ
+til22 &lt;- read_csv(&quot;data/temps_until_2022.csv&quot;) %&gt;% 
+  mutate(date=as.Date(date))
+
+# 2023年7月31日までのデータ
+only23 &lt;- read_csv(&quot;data/temps2023/all2023.csv&quot;) %&gt;% 
+  mutate(date=as.Date(date),
+         avg=as.double(avg),
+         max=as.double(max),
+         min=as.double(min))
+
+# データを合体させる
+temps &lt;- bind_rows(til22, only23) %&gt;% 
+  mutate(cities=ifelse(place %in% c(&quot;tokyo&quot;,&quot;nagoya&quot;,&quot;osaka&quot;,&quot;fukuoka&quot;),&quot;1&quot;,&quot;0&quot;)) %&gt;% #　４都市のデータにタグ
+  select(date,avg,max,min,place,cities) %&gt;% 
+  distinct(date,avg,max,min,place,cities)</code></pre>
+<p>こんな感じのデータ。</p>
+<pre class="r"><code>temps</code></pre>
+<pre><code>## # A tibble: 904,712 × 6
+##    date         avg   max   min place cities
+##    &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+##  1 1960-01-01   9.6  13.1   6.7 osaka 1     
+##  2 1960-01-02   6.5  10.9   2.8 osaka 1     
+##  3 1960-01-03   5.2  11.2   0.1 osaka 1     
+##  4 1960-01-04   9.1  17.2   1.3 osaka 1     
+##  5 1960-01-05  10.3  18     4.6 osaka 1     
+##  6 1960-01-06   5.1   7.3   4.2 osaka 1     
+##  7 1960-01-07   4     8.9  -0.5 osaka 1     
+##  8 1960-01-08   5.4  10.6  -0.7 osaka 1     
+##  9 1960-01-09   6.7  12.3   1.9 osaka 1     
+## 10 1960-01-10   7    11.5   1.4 osaka 1     
+## # … with 904,702 more rows</code></pre>
+</div>
+<div id="月の平均気温年別ランキング" class="section level2">
+<h2>7月の平均気温、年別ランキング</h2>
+<p>気象庁が選んだ15地点で、2023年7月の平均気温が過去最高になったことを示すランキング。とりあえずトップ10を。</p>
+<pre class="r"><code>temps %&gt;%
+  filter(cities==0,
+         !is.na(avg)) %&gt;%
+  mutate(year=year(date),
+         month=month(date)) %&gt;%
+  filter(month == 7) %&gt;%
+  group_by(year) %&gt;%
+  summarize(avg=mean(avg)) %&gt;%
+  arrange(desc(avg)) %&gt;%
+  head(10) %&gt;% 
+  gt()</code></pre>
+<div id="dqqyigeedo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#dqqyigeedo .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#dqqyigeedo .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dqqyigeedo .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#dqqyigeedo .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#dqqyigeedo .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#dqqyigeedo .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dqqyigeedo .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dqqyigeedo .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#dqqyigeedo .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#dqqyigeedo .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#dqqyigeedo .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#dqqyigeedo .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#dqqyigeedo .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#dqqyigeedo .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#dqqyigeedo .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#dqqyigeedo .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#dqqyigeedo .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#dqqyigeedo .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dqqyigeedo .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dqqyigeedo .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dqqyigeedo .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dqqyigeedo .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#dqqyigeedo .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dqqyigeedo .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dqqyigeedo .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dqqyigeedo .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#dqqyigeedo .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#dqqyigeedo .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dqqyigeedo .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dqqyigeedo .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dqqyigeedo .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dqqyigeedo .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dqqyigeedo .gt_left {
+  text-align: left;
+}
+
+#dqqyigeedo .gt_center {
+  text-align: center;
+}
+
+#dqqyigeedo .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#dqqyigeedo .gt_font_normal {
+  font-weight: normal;
+}
+
+#dqqyigeedo .gt_font_bold {
+  font-weight: bold;
+}
+
+#dqqyigeedo .gt_font_italic {
+  font-style: italic;
+}
+
+#dqqyigeedo .gt_super {
+  font-size: 65%;
+}
+
+#dqqyigeedo .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#dqqyigeedo .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dqqyigeedo .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#dqqyigeedo .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#dqqyigeedo .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#dqqyigeedo .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#dqqyigeedo .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="year">year</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="avg">avg</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="year" class="gt_row gt_right">2023</td>
+<td headers="avg" class="gt_row gt_right">25.96473</td></tr>
+    <tr><td headers="year" class="gt_row gt_right">1978</td>
+<td headers="avg" class="gt_row gt_right">25.58043</td></tr>
+    <tr><td headers="year" class="gt_row gt_right">2017</td>
+<td headers="avg" class="gt_row gt_right">25.47763</td></tr>
+    <tr><td headers="year" class="gt_row gt_right">1994</td>
+<td headers="avg" class="gt_row gt_right">25.40344</td></tr>
+    <tr><td headers="year" class="gt_row gt_right">2018</td>
+<td headers="avg" class="gt_row gt_right">25.25570</td></tr>
+    <tr><td headers="year" class="gt_row gt_right">2022</td>
+<td headers="avg" class="gt_row gt_right">25.25570</td></tr>
+    <tr><td headers="year" class="gt_row gt_right">2021</td>
+<td headers="avg" class="gt_row gt_right">25.14731</td></tr>
+    <tr><td headers="year" class="gt_row gt_right">1955</td>
+<td headers="avg" class="gt_row gt_right">25.14409</td></tr>
+    <tr><td headers="year" class="gt_row gt_right">2004</td>
+<td headers="avg" class="gt_row gt_right">25.06301</td></tr>
+    <tr><td headers="year" class="gt_row gt_right">1942</td>
+<td headers="avg" class="gt_row gt_right">25.03247</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+<div id="月の平均気温の推移のグラフ" class="section level2">
+<h2>「７月の平均気温の推移」のグラフ</h2>
+<p>データから、７月の年別、日別の平均気温の推移を示す<a
+href="https://digital.asahi.com/articles/photo/AS20230801002588.html">グラフ</a>を描く。紙面では1面に掲載されたもの。</p>
+<pre class="r"><code># 年別グラフ
+temps %&gt;%
+  filter(!is.na(avg)) %&gt;%
+  mutate(year=year(date),
+         month=month(date)) %&gt;%
+  filter(month == 7,year&gt;=1898,cities==0) %&gt;%
+  group_by(year) %&gt;%
+  summarize(avg=mean(avg)) %&gt;%
+  ggplot() +
+  geom_line(aes(year, avg)) +
+  scale_x_continuous(breaks = seq(1900, 2020, by = 10)) +
+  labs(title=&quot;７月の平均気温の年別推移&quot;,
+       subtitle=&quot;気象庁が選んだ１５地点の平均値&quot;)</code></pre>
+<p><img src="climate_change_pub_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre class="r"><code># 日別グラフ
+temps %&gt;%
+  filter(cities==0) %&gt;%
+  mutate(year = year(date),
+         month = month(date),
+         day = day(date)) %&gt;%
+  filter(month == 7) %&gt;% 
+  group_by(year,day) %&gt;%
+  summarize(avg=mean(avg)) %&gt;% 
+  mutate(年 = ifelse(year == 2023, &quot;2023&quot;,
+              ifelse(year == 1978, &quot;1978&quot;, &quot;その他の年&quot;))) %&gt;%
+  ggplot(aes(day,avg,color=年,group=year)) +
+  geom_line() +
+  scale_color_manual(values=c(&quot;black&quot;, &quot;red&quot;, &quot;lightgray&quot;)) +
+  labs(title=&quot;７月の日別平均気温の推移&quot;,
+       subtitle=&quot;気象庁が選んだ１５地点の平均値&quot;)</code></pre>
+<pre><code>## `summarise()` has grouped output by
+## &#39;year&#39;. You can override using the
+## `.groups` argument.</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing
+## values (`geom_line()`).</code></pre>
+<p><img src="climate_change_pub_files/figure-html/unnamed-chunk-5-2.png" width="672" /></p>
+</div>
+<div id="平均気温の推移を示すヒートマップ" class="section level2">
+<h2>平均気温の推移を示すヒートマップ</h2>
+<p>1898年以降の各年について、7月のすべての日の平均気温の推移を示す<a
+href="https://digital.asahi.com/articles/photo/AS20230801002840.html">ヒートマップ</a>を描く。紙面では2面に掲載。1945年の一部データが欠損しているのは、この年の7月19日に千葉県銚子市が空襲を受け、銚子地方気象台の1～19日の記録が失われたため。歴史を感じますね…</p>
+<pre class="r"><code>temps %&gt;%
+  filter(cities==0) %&gt;%
+  group_by(date) %&gt;%
+  summarize(avg_avg=mean(avg)) %&gt;%
+  mutate(year=year(date),
+         month=month(date),
+         day=day(date)) %&gt;%
+  filter(month==7) %&gt;%
+  ggplot(aes(day,year,fill=avg_avg)) +
+  geom_tile() +
+  scale_fill_gradient2(high=&quot;red&quot;,low=&quot;blue&quot;,mid = &quot;white&quot;,midpoint = 23) +
+  scale_y_continuous(breaks = seq(1900,2020, by = 20)) +
+  labs(title=&quot;7月の日ごと平均気温の推移&quot;,
+       subtitle=&quot;気象庁が選んだ１５地点&quot;)</code></pre>
+<p><img src="climate_change_pub_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="猛暑日や真夏日の数を示す棒グラフ" class="section level2">
+<h2>猛暑日や真夏日の数を示す棒グラフ</h2>
+<p>猛暑日や真夏日がだんだん増えてきていることを示す<a
+href="https://digital.asahi.com/articles/photo/AS20230801002839.html">積み上げ棒グラフ</a>。2面掲載。前述の1945年を始め、ところどころデータが欠損している。</p>
+<pre class="r"><code>temps %&gt;%
+  filter(!is.na(max)) %&gt;%
+  mutate(year=year(date),
+         month=month(date)) %&gt;%
+  filter(month==7,
+         cities==0) %&gt;% 
+  mutate(mousho=ifelse(max&gt;=35,1,0),
+         manatsu=ifelse((max&gt;=30 &amp; max&lt;35),1,0),
+         natsu=ifelse((max&gt;=25 &amp; max&lt;30),1,0),
+         sonota=ifelse(mousho+manatsu+natsu==0,1,0)) %&gt;% 
+  group_by(year) %&gt;% 
+  summarize(&quot;4_猛暑日&quot;=sum(mousho),
+            &quot;3_真夏日&quot;=sum(manatsu),
+            &quot;2_夏日&quot;=sum(natsu),
+            &quot;1_その他&quot;=sum(sonota)) %&gt;%
+  pivot_longer(cols=c(-year),names_to = &quot;type&quot;,values_to = &quot;days&quot;) %&gt;% 
+  ggplot(aes(year,days,fill=type)) +
+  geom_bar(stat=&quot;identity&quot;) +
+  labs(title=&quot;7月の猛暑日や真夏日などの日数&quot;,
+       subtitle=&quot;気象庁が選んだ１５地点&quot;)</code></pre>
+<p><img src="climate_change_pub_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>今回の記事では、6月にやった熱中症分析のような回帰分析はせず、やったことはほぼ、データをグラフにするという単純な作業だけだった。</p>
+<p>ただ、何をもって「日本の平均気温」とするかは、実はけっこう複雑だ。気象庁は前述した国内各地の15観測所の気温について、1991~2020年の平均値を「平年値」とし、そこからの差分を「日本の平均気温の変化」とみなす、という手順を踏んでいる。一方で朝日新聞が今回やったのは、15観測所の気温を平均して、それをざっくり、日本の平均気温とみなすというもの。</p>
+<p>こうした単純化をしたのは、気象庁の定義する「平年値」にはところどころ欠損があったり、また観測所が引っ越すことによって補正が必要になったりするので、あまり深入りしないほうが良いと判断したため。気象庁の平井雅之・気候情報調整官からさまざまなアドバイスを頂きながら、こうした分析を進めた。</p>
+<p>以上。</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
