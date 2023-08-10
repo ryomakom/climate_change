@@ -233,8 +233,6 @@ $(document).ready(function () {
 
 
 
-
-
 <div id="header">
 
 
@@ -268,11 +266,14 @@ library(gt)</code></pre>
 <h2>データを読み込む</h2>
 <p>気象庁のサイトからとってきたデータを読み込む。</p>
 <pre class="r"><code># 19世紀末から2022年までのデータ
-til22 &lt;- read_csv(&quot;data/temps_until_2022.csv&quot;) %&gt;% 
+til22 &lt;- bind_rows(read_csv(&quot;data/till1920.csv&quot;),
+                   read_csv(&quot;data/till1960.csv&quot;),
+                   read_csv(&quot;data/till2000.csv&quot;),
+                   read_csv(&quot;data/till2022.csv&quot;)) %&gt;% 
   mutate(date=as.Date(date))
 
 # 2023年7月31日までのデータ
-only23 &lt;- read_csv(&quot;data/temps2023/all2023.csv&quot;) %&gt;% 
+only23 &lt;- read_csv(&quot;data/all2023.csv&quot;) %&gt;% 
   mutate(date=as.Date(date),
          avg=as.double(avg),
          max=as.double(max),
@@ -288,16 +289,16 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
 <pre><code>## # A tibble: 904,712 × 6
 ##    date         avg   max   min place cities
 ##    &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
-##  1 1960-01-01   9.6  13.1   6.7 osaka 1     
-##  2 1960-01-02   6.5  10.9   2.8 osaka 1     
-##  3 1960-01-03   5.2  11.2   0.1 osaka 1     
-##  4 1960-01-04   9.1  17.2   1.3 osaka 1     
-##  5 1960-01-05  10.3  18     4.6 osaka 1     
-##  6 1960-01-06   5.1   7.3   4.2 osaka 1     
-##  7 1960-01-07   4     8.9  -0.5 osaka 1     
-##  8 1960-01-08   5.4  10.6  -0.7 osaka 1     
-##  9 1960-01-09   6.7  12.3   1.9 osaka 1     
-## 10 1960-01-10   7    11.5   1.4 osaka 1     
+##  1 1875-01-01    NA    NA    NA osaka 1     
+##  2 1875-01-02    NA    NA    NA osaka 1     
+##  3 1875-01-03    NA    NA    NA osaka 1     
+##  4 1875-01-04    NA    NA    NA osaka 1     
+##  5 1875-01-05    NA    NA    NA osaka 1     
+##  6 1875-01-06    NA    NA    NA osaka 1     
+##  7 1875-01-07    NA    NA    NA osaka 1     
+##  8 1875-01-08    NA    NA    NA osaka 1     
+##  9 1875-01-09    NA    NA    NA osaka 1     
+## 10 1875-01-10    NA    NA    NA osaka 1     
 ## # … with 904,702 more rows</code></pre>
 </div>
 <div id="月の平均気温年別ランキング" class="section level2">
@@ -314,12 +315,12 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   arrange(desc(avg)) %&gt;%
   head(10) %&gt;% 
   gt()</code></pre>
-<div id="dqqyigeedo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="wzasgxkabk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#dqqyigeedo .gt_table {
+#wzasgxkabk .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -344,7 +345,7 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   border-left-color: #D3D3D3;
 }
 
-#dqqyigeedo .gt_heading {
+#wzasgxkabk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -356,12 +357,12 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#dqqyigeedo .gt_caption {
+#wzasgxkabk .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#dqqyigeedo .gt_title {
+#wzasgxkabk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -373,7 +374,7 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   border-bottom-width: 0;
 }
 
-#dqqyigeedo .gt_subtitle {
+#wzasgxkabk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -385,13 +386,13 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   border-top-width: 0;
 }
 
-#dqqyigeedo .gt_bottom_border {
+#wzasgxkabk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#dqqyigeedo .gt_col_headings {
+#wzasgxkabk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -406,7 +407,7 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#dqqyigeedo .gt_col_heading {
+#wzasgxkabk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -426,7 +427,7 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   overflow-x: hidden;
 }
 
-#dqqyigeedo .gt_column_spanner_outer {
+#wzasgxkabk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -438,15 +439,15 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   padding-right: 4px;
 }
 
-#dqqyigeedo .gt_column_spanner_outer:first-child {
+#wzasgxkabk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#dqqyigeedo .gt_column_spanner_outer:last-child {
+#wzasgxkabk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#dqqyigeedo .gt_column_spanner {
+#wzasgxkabk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -458,7 +459,7 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   width: 100%;
 }
 
-#dqqyigeedo .gt_group_heading {
+#wzasgxkabk .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -484,7 +485,7 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   text-align: left;
 }
 
-#dqqyigeedo .gt_empty_group_heading {
+#wzasgxkabk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -499,15 +500,15 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   vertical-align: middle;
 }
 
-#dqqyigeedo .gt_from_md > :first-child {
+#wzasgxkabk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#dqqyigeedo .gt_from_md > :last-child {
+#wzasgxkabk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#dqqyigeedo .gt_row {
+#wzasgxkabk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -526,7 +527,7 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   overflow-x: hidden;
 }
 
-#dqqyigeedo .gt_stub {
+#wzasgxkabk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -539,7 +540,7 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   padding-right: 5px;
 }
 
-#dqqyigeedo .gt_stub_row_group {
+#wzasgxkabk .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -553,11 +554,11 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   vertical-align: top;
 }
 
-#dqqyigeedo .gt_row_group_first td {
+#wzasgxkabk .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#dqqyigeedo .gt_summary_row {
+#wzasgxkabk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -567,16 +568,16 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   padding-right: 5px;
 }
 
-#dqqyigeedo .gt_first_summary_row {
+#wzasgxkabk .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#dqqyigeedo .gt_first_summary_row.thick {
+#wzasgxkabk .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#dqqyigeedo .gt_last_summary_row {
+#wzasgxkabk .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -586,7 +587,7 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   border-bottom-color: #D3D3D3;
 }
 
-#dqqyigeedo .gt_grand_summary_row {
+#wzasgxkabk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -596,7 +597,7 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   padding-right: 5px;
 }
 
-#dqqyigeedo .gt_first_grand_summary_row {
+#wzasgxkabk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -606,11 +607,11 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   border-top-color: #D3D3D3;
 }
 
-#dqqyigeedo .gt_striped {
+#wzasgxkabk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#dqqyigeedo .gt_table_body {
+#wzasgxkabk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -619,7 +620,7 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   border-bottom-color: #D3D3D3;
 }
 
-#dqqyigeedo .gt_footnotes {
+#wzasgxkabk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -633,7 +634,7 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#dqqyigeedo .gt_footnote {
+#wzasgxkabk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -642,7 +643,7 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   padding-right: 5px;
 }
 
-#dqqyigeedo .gt_sourcenotes {
+#wzasgxkabk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -656,7 +657,7 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#dqqyigeedo .gt_sourcenote {
+#wzasgxkabk .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -664,64 +665,64 @@ temps &lt;- bind_rows(til22, only23) %&gt;%
   padding-right: 5px;
 }
 
-#dqqyigeedo .gt_left {
+#wzasgxkabk .gt_left {
   text-align: left;
 }
 
-#dqqyigeedo .gt_center {
+#wzasgxkabk .gt_center {
   text-align: center;
 }
 
-#dqqyigeedo .gt_right {
+#wzasgxkabk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#dqqyigeedo .gt_font_normal {
+#wzasgxkabk .gt_font_normal {
   font-weight: normal;
 }
 
-#dqqyigeedo .gt_font_bold {
+#wzasgxkabk .gt_font_bold {
   font-weight: bold;
 }
 
-#dqqyigeedo .gt_font_italic {
+#wzasgxkabk .gt_font_italic {
   font-style: italic;
 }
 
-#dqqyigeedo .gt_super {
+#wzasgxkabk .gt_super {
   font-size: 65%;
 }
 
-#dqqyigeedo .gt_footnote_marks {
+#wzasgxkabk .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#dqqyigeedo .gt_asterisk {
+#wzasgxkabk .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#dqqyigeedo .gt_indent_1 {
+#wzasgxkabk .gt_indent_1 {
   text-indent: 5px;
 }
 
-#dqqyigeedo .gt_indent_2 {
+#wzasgxkabk .gt_indent_2 {
   text-indent: 10px;
 }
 
-#dqqyigeedo .gt_indent_3 {
+#wzasgxkabk .gt_indent_3 {
   text-indent: 15px;
 }
 
-#dqqyigeedo .gt_indent_4 {
+#wzasgxkabk .gt_indent_4 {
   text-indent: 20px;
 }
 
-#dqqyigeedo .gt_indent_5 {
+#wzasgxkabk .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
